@@ -43,11 +43,20 @@
   <ItemGroup>
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="PersonDocument.cs" />
+    <Compile Include="PersonReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PersonWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LuceneWrapper\LuceneWrapper.csproj">
+      <Project>{220a78ba-8ad2-4d66-a435-6a9b7defd444}</Project>
+      <Name>LuceneWrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

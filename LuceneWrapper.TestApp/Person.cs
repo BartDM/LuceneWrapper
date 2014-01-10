@@ -27,7 +27,7 @@ namespace LuceneWrapper.TestApp
             sb.AppendLineFormat("EmailAddress: {0}", EmailAddress);
             foreach (var language in Languages)
             {
-                sb.AppendLineFormat("Language: {0}", language);
+                sb.AppendLineFormat("Language: {0}", language.LanguageCode);
             }
 
             sb.AppendLineFormat("Registration: {0}-{1}-{2}", RegistrationDate.Year, RegistrationNumber,

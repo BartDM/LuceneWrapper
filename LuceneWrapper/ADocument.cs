@@ -65,9 +65,19 @@ namespace LuceneWrapper
         /// <param name="value">The value of the parameter</param>
         /// <param name="store">The Store setting</param>
         /// <param name="index">The Index setting</param>
-        protected void AddParameterToDocument(string name, dynamic value, Field.Store store, Field.Index index)
+        private void AddParameterToDocument(string name, dynamic value, Field.Store store, Field.Index index)
         {
             document.Add(new Field(name, value.ToString(), store, index));
+        }
+
+        protected void AddParameterToDocumentStoreParameter(string name, dynamic value)
+        {
+            AddParameterToDocument(name, value,Field.Store.YES,Field.Index.ANALYZED);
+        }
+
+        protected void AddParameterToDocumentNoStoreParameter(string name, dynamic value)
+        {
+            AddParameterToDocument(name, value,Field.Store.NO,Field.Index.ANALYZED);
         }
 
         public override string ToString()

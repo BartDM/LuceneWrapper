@@ -37,7 +37,7 @@ namespace LuceneWrapper
         /// <param name="field">The field that have to be searched for</param>
         /// <param name="searchQuery">The query as string with the search term</param>
         /// <returns>A SearchResult object</returns>
-        protected SearchResult Search<T>(string field, string searchQuery) where T : IDocument
+        protected SearchResult Search<T>(string field, string searchQuery) where T : ADocument
         {
             Log.DebugFormat("Searching for Type: {0} with query \"{1}\" for field \"{2}\"", typeof(T), searchQuery, field);
             //Fetch the possible fields to search on
